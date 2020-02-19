@@ -5,36 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #bestalbums {
+            width: 95%;
+            background-color: lightblue;
+        }
+        #bestalbums, 
+        #bestalbums tr, 
+        #bestalbums td, 
+        #bestalbums th {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        #bestalbums th {
+            background-color:lightslategrey;
+        }
         .bnc {
             text-align: center;
-            font-weight:  bold;
-            color: red;
+            font-weight: bold;
         }
-        #bestsellers {
-            font-style: italic;
-        }
-        #bestsellers tr:nth-child(even) {
+        #bestalbums tr:nth-child(even) {
             background-color: lightblue;
         }
 
-        #bestsellers tr:nth-child(odd) {
+        #bestalbums tr:nth-child(odd) {
             background-color: lightgreen;
         }
-        #bestsellers tr:hover {
+        #bestalbums tr:hover {
             background-color: indianred;
         }
+        .boldandgreen {
+            font-weight: bold;
+            color: green;
+        }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            let cp = document.getElementById("colorpicker");
-            cp.addEventListener("change", function() {
-                document.body.style.backgroundColor = cp.value;
-            })
-        })
-    </script>
 </head>
 <body>
-    <table width=90% border=1 cellspacing=0 cellpadding=10 id="bestsellers">
+    <ol>
+        <li class="boldandgreen">first</li>
+        <li>second</li>
+        <li class="boldandgreen">third</li>
+        <li>fourth</li>
+        <li class="boldandgreen">fifth</li>
+    </ol>
+    <table id="bestalbums" style="border: 1px solid black;">
         <tr>
             <th>Artist</th>
             <th>Album</th>
@@ -43,9 +56,9 @@
             <th>Total Certified Copies</th>
         </tr>
         <tr>
-            <td>Michael Jackson</td>
+            <td style="color:purple;">Michael Jackson</td>
             <td>Thriller</td>
-            <td class="bnc">1982</td>
+            <td>1982</td>
             <td>Pop, post-disco, funk and rock</td>
             <td class="bnc">47.3</td>
         </tr>
@@ -64,7 +77,7 @@
             <td class="bnc">21.7</td>
         </tr>
         <tr>
-            <td>Pink Floyd</td>
+            <td class="boldandgreen">Pink Floyd</td>
             <td>The Dark Side of the Moon</td>
             <td>1973</td>
             <td>Progressive rock</td>
@@ -106,26 +119,5 @@
             <td class="bnc">29.6</td>
         </tr>
     </table>
-    <form action="formpost.aspx" method="post">
-        <label for="">first name</label>
-        <input type="text" name="" id="">
-        <br>
-        <label for="">last name</label>
-        <input type="text" name="" id="">
-        <br>
-        <label for="">phone number</label>
-        <input type="tel" name="" id="">
-        <br>
-        <label for="">email</label>
-        <input type="email" name="" id="">
-        <br>
-        <label for="">age</label>
-        <input type="number" name="" id="">
-        <br>
-        <label for="">favorite color</label>
-        <input type="color" name="" id="colorpicker">
-        <br>
-        <input type="submit" value="Go">
-    </form>
 </body>
 </html>
