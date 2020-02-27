@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs</title>
+    <style>
+        #main {
+            border: 5px dotted purple;
+            height: 400px;
+            width: 300px;
+            margin: 20px 5px 0px 30px;
+            padding: 10px;
+        }
+        #red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 20px;
+            top: 20px;
+        }
+        #green {
+            background-color: green;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: 60px;
+            top: 60px;
+        }
+        #blue {
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 5px solid orange;
+            left: 275px;
+            top: 375px;
+        }
+        #purple {
+            background-color: purple;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 25px;
+            top: 25px;
+        }
+        #inline {
+            position: relative;
+            top: 100px;
+            border: 1px solid red;
+            display: inline;
+        }
+        #grid {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+            top: 100px;
+            display: grid;
+            grid-template-columns: auto 50px auto;
+        }
+        .inner {
+            width: 50px;
+            height: 50px;
+            background-color: maroon;
+            align-self:center;
+            justify-self:center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <div id="red"></div>
+        <div id="green"></div>
+    </div>
+    <div id="blue"><div id="purple"></div></div>
+
+    <div id="inline">now is the time for all good men to come to 
+        the aid of their country.
+    </div>
+    <div id="grid">
+        <div class="inner""></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

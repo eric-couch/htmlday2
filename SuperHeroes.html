@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            display:grid;
+        }
+        .movietype {
+            border: 1px solid red;
+            height: 600px;
+        }
+        #dc {
+            background-image: URL('https://wallpaperplay.com/walls/full/7/9/c/98304.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #marvel {
+            background-image: URL('https://www.davidtan.org/wp-content/uploads/2008/05/iron-man-photo-pic-wallpaper12.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #transformers {
+            background-image: URL('https://3.bp.blogspot.com/-tv04WkYX15c/VjCLEhRuOTI/AAAAAAAAZls/CQ3YLFtZm98/w1200-h630-p-k-no-nu/transformers-desktop-backgrounds-wallpaper-wallpapers-quality.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .movie {
+            display: grid;
+            grid-template-columns: 300px auto;
+            
+
+        }
+        .movie ul li, .movie ul li ul li {
+            font-family: Odibee Sans;
+            color: white;
+        }
+        .movie img {
+            float: left;
+            align-self: center;
+            justify-self:left;
+            height: 100%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div class="movietype" id="dc">
+            <div class="movie" id="batman">
+                <img src="https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY268_CR9,0,182,268_AL_.jpg">
+                
+                <ul>
+                    <li>Director: Christopher Nolan</li>
+                    <li>Stars: <ul>
+                        <li> Christian Bale</li>
+                        <li>Michael Caine</li>
+                        <li>Ken Watanabe</li>
+                    </ul></li>
+                    <li>Released: 2005</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <iframe width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/MzygB9B1SbA" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="movie" id="wonderwoman"></div>
+        </div>
+        <div class="movietype" id="marvel"></div>
+        <div class="movietype" id="transformers"></div>
+    </div>
+</body>
+</html>
