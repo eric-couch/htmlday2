@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calc(x, y, operation) {
+        console.log(x, y, operation);
+        switch (operation) {
+          case "mult":
+            return x * y;
+            break;
+          case "div":
+            return x / y;
+            break;
+          case "add":
+            return parseInt(x) + parseInt(y);
+            break;
+          case "sub":
+            return x - y;
+            break;
+          default:
+            return x % y;
+            break;
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        let x = document.getElementById("x");
+        let y = document.getElementById("y");
+        let operation = document.getElementById("operation");
+        let go = document.getElementById("go");
+        go.addEventListener("click", function() {
+          console.log(calc(x.value, y.value, operation.value));
+          document.getElementById("answer").innerText = calc(x.value, y.value, operation.value);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" name="" id="x" />
+    <select name="" id="operation">
+      <option value="mult">*</option>
+      <option value="div">/</option>
+      <option value="add">+</option>
+      <option value="sub">-</option>
+      <option value="mod">%</option>
+    </select>
+    <input type="text" name="" id="y" /><br />
+    <button id="go">Submit</button><br>
+    Answer: <div id="answer"></div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let goButton = document.getElementById('go');
+            goButton.addEventListener('click', function() {
+                let f = document.getElementById('Fahrenheit');
+                let c = (5/9) * (f.value - 32);
+                document.getElementById('Celcius').innerText = c;
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="Fahrenheit"> &deg;F 
+    <div id='Celcius'></div>&deg;C
+    <button id="go">Convert</button>
+</body>
+</html>
